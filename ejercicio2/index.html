@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Formulario de registro - Mi web</title>
+    <style>
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="informacion"]{
+            margin-right: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Formulario de registro</h1>
+    <form method="GET" action="">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="50" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" maxlength="50" required>
+
+        <label>Sexo:</label>
+        <input type="radio" id="hombre" name="sexo" value="hombre" required>
+        <label for="hombre" style="display: inline;">hombre</label>
+        <input type="radio" id="mujer" name="sexo" value="mujer">
+        <label for="mujer" style="display: inline;">mujer</label>
+
+        <label for="correo">Correo:</label>
+        <input type="text" id="correo" name="correo" required>
+        
+        <div>
+        <input type="checkbox" id="informacion" name="informacion" checked>
+        <label for="informacion" style="display: inline;">Deseo recibir información sobre novedades y ofertas</label>
+        </div>
+
+        <input type="checkbox" id="condiciones" name="condiciones" required>
+        <label for="condiciones" style="display: inline;">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
